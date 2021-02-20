@@ -18,4 +18,22 @@ public class MyBasket implements Basket {
     public void addProducts(String product, int quantity) {
         this.product.add(new Product(product, quantity));
     }
+    @Override
+    public void removeProduct(String product){
+        this.product.remove(2);
+    }
+
+    @Override
+    public void updateProductQuantity(String product, int quantity) {
+        this.product.remove(0);
+        this.product.add(0,new Product(product, quantity));
+    }
+
+    @Override
+    public void clear() {
+        this.product.removeAll(product);
+        boolean removed = product.isEmpty();
+        if (removed==true)
+            System.out.println("Корзина пуста");
+    }
 }
