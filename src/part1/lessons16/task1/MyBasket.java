@@ -36,4 +36,14 @@ public class MyBasket implements Basket {
         if (removed==true)
             System.out.println("Корзина пуста");
     }
+
+    @Override
+    public List<String> getProducts() {
+        return null;
+    }
+
+    @Override
+    public int getProductQuantity(String product) {
+        return 0;
+    }
 }
