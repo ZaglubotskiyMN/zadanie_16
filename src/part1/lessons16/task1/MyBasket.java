@@ -3,10 +3,11 @@ package part1.lessons16.task1;
 import java.util.*;
 
 public class MyBasket implements Basket {
-    private List<Product> product;
+    private ArrayList product;
 
-    public MyBasket() {
-        product = new ArrayList<>();
+
+    public MyBasket()  {
+        product = new ArrayList();
     }
 
     public void showAll(){
@@ -18,9 +19,15 @@ public class MyBasket implements Basket {
     public void addProducts(String product, int quantity) {
         this.product.add(new Product(product, quantity));
     }
+
     @Override
     public void removeProduct(String product){
-        this.product.remove(2);
+      int index =this.product.indexOf(product);
+      this.product.remove(index);
+      this.product.remove(product);
+
+
+        
     }
 
     @Override
@@ -39,7 +46,12 @@ public class MyBasket implements Basket {
 
     @Override
     public List<String> getProducts() {
-        return null;
+        Iterator products = product.iterator();
+        while (products.hasNext()){
+            System.out.printf("%s %s \n",products.next(),products.next()+ "шт.");
+        }
+        System.out.println();
+        return ArrayList;
     }
 
     @Override

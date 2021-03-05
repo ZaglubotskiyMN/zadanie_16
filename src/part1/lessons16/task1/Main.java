@@ -15,12 +15,12 @@ public class Main {
         System.out.println("Удаляем продукт");
         basket.removeProduct("Beer");
         basket.showAll();
-        System.out.println("Модифицируем продукт");
-        basket.updateProductQuantity("water",35);
-        basket.showAll();
-        System.out.println("Удаляем корзину!");
-        basket.clear();
-        basket.showAll();
+        //System.out.println("Модифицируем продукт");
+        //basket.updateProductQuantity("water",35);
+       // basket.showAll();
+        //System.out.println("Удаляем корзину!");
+       //basket.clear();
+       // basket.showAll();
 
 
 
